@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#244d35">
+<title>سبزینه | تازگی از دل طبیعت</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--green:#244d35;--green2:#376b49;--mint:#eaf2e8;--cream:#fbf8ef;--orange:#d98b45;--ink:#243128;--muted:#758078;--line:#e8e9e1;--white:#fff;--shadow:0 16px 45px rgba(30,60,39,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--green);color:#eaf2e8;text-align:center;padding:8px 12px;font-size:12px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--green);font-size:24px;font-weight:900}.logo{width:42px;height:42px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:25px}.links{display:flex;gap:28px}.links a{color:#526056;text-decoration:none;font-size:14px;font-weight:600}.links a:hover{color:var(--green2)}.nav-actions{display:flex;align-items:center;gap:10px}.cart-btn,.menu-btn{border:0;background:var(--mint);color:var(--green);border-radius:14px;padding:11px 15px;font-weight:800}.cart-count{background:var(--orange);color:#fff;border-radius:30px;padding:1px 7px;font-size:11px;margin-right:4px}.menu-btn{display:none}
+.hero{background:var(--cream);overflow:hidden;position:relative}.hero-inner{min-height:500px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding-top:42px;padding-bottom:42px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e9f0e5;color:var(--green2);padding:8px 14px;border-radius:30px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.35;margin:18px 0;color:var(--green);font-weight:900}.hero h1 span{color:var(--orange)}.hero p{color:#6d786f;line-height:2;font-size:16px;max-width:520px}.primary,.secondary{border:0;border-radius:14px;padding:13px 22px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.primary{background:var(--green);color:#fff;box-shadow:0 9px 20px #244d3525}.primary:hover{background:var(--green2)}.secondary{background:#fff;color:var(--green);border:1px solid var(--line)}.hero-buttons{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}.hero-art{height:390px;position:relative;display:grid;place-items:center}.hero-plate{width:min(360px,85%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,#fff 0 48%,#e4ebdc 49% 58%,#d3dfcc 59% 63%,transparent 64%);display:grid;place-items:center;font-size:160px;filter:drop-shadow(0 20px 25px #294a2b20)}.float-tag{position:absolute;background:#fff;padding:12px 16px;border-radius:16px;box-shadow:var(--shadow);font-size:13px;font-weight:800}.tag-one{top:42px;right:4px}.tag-two{bottom:45px;left:2px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-24px;position:relative}.trust-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 25px #203b2410}.trust-icon{width:42px;height:42px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-size:21px}.trust-card b{display:block;font-size:14px}.trust-card small{color:var(--muted);font-size:11px}
+section{padding:78px 0}.section-head{text-align:center;margin-bottom:32px}.section-head .eyebrow{margin-bottom:12px}.section-head h2{font-size:30px;color:var(--green);margin:5px 0 8px}.section-head p{color:var(--muted);margin:0;font-size:14px}.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-bottom:28px}.filter{border:1px solid var(--line);background:#fff;color:#647067;border-radius:30px;padding:9px 17px;font-size:13px;font-weight:700}.filter.active,.filter:hover{background:var(--green);border-color:var(--green);color:#fff}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;transition:.25s}.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.product-img{height:180px;background:var(--mint);display:grid;place-items:center;font-size:85px;position:relative}.product-img .label{position:absolute;top:12px;right:12px;background:#fff;color:var(--green);border-radius:20px;padding:5px 10px;font-size:10px;font-weight:800}.product-info{padding:16px}.product-info h3{margin:0 0 6px;font-size:16px;color:var(--green)}.product-info p{font-size:12px;color:var(--muted);margin:0 0 15px;min-height:38px;line-height:1.8}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:900;color:var(--green);font-size:14px}.price small{font-size:10px;color:var(--muted);font-weight:500}.add{border:0;background:var(--mint);color:var(--green);border-radius:11px;padding:9px 12px;font-size:12px;font-weight:800}.add:hover{background:var(--green);color:#fff}
+.about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.about-visual{min-height:330px;border-radius:28px;background:linear-gradient(145deg,#dce9d8,#f2ead8);display:grid;place-items:center;font-size:150px;position:relative}.about-visual:after{content:"تازه، سالم، باکیفیت";position:absolute;bottom:20px;background:#fff;padding:10px 18px;border-radius:30px;font-size:13px;font-weight:800;color:var(--green)}.about-copy h2{font-size:32px;color:var(--green);margin:12px 0}.about-copy p{color:#69756c;line-height:2.2}.features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.feature{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700}.feature span{font-size:20px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{padding:28px;border:1px solid var(--line);border-radius:22px}.contact-card h3{color:var(--green);margin-top:0}.contact-line{display:flex;align-items:center;gap:12px;padding:12px 0;color:#647067;font-size:14px}.contact-line span{font-size:22px}.contact-form{display:grid;gap:12px}.contact-form input,.contact-form textarea,.checkout-form input,.checkout-form textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;outline:none}.contact-form input:focus,.contact-form textarea:focus,.checkout-form input:focus,.checkout-form textarea:focus{border-color:var(--green2)}textarea{resize:vertical;min-height:95px}
+footer{background:#1d3e2b;color:#eaf2e8;padding:34px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-inner p{margin:4px 0;color:#c2d1c3;font-size:12px}.footer-links{display:flex;gap:18px}.footer-links a{color:#eaf2e8;text-decoration:none;font-size:12px}
+.overlay{position:fixed;inset:0;background:#101b14a6;z-index:40;opacity:0;visibility:hidden;transition:.25s}.overlay.show{opacity:1;visibility:visible}.drawer{position:fixed;z-index:41;top:0;left:0;height:100%;width:min(440px,100%);background:#fff;transform:translateX(-105%);transition:.3s;display:flex;flex-direction:column;box-shadow:var(--shadow)}.drawer.open{transform:translateX(0)}.drawer-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.drawer-head h3{margin:0;color:var(--green)}.close{border:0;background:var(--mint);border-radius:10px;padding:8px 12px;color:var(--green)}.cart-items{padding:16px 22px;overflow:auto;flex:1}.empty{text-align:center;color:var(--muted);padding:55px 10px}.cart-item{display:grid;grid-template-columns:55px 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.cart-emoji{width:55px;height:55px;background:var(--mint);border-radius:13px;display:grid;place-items:center;font-size:28px}.cart-item b{font-size:13px}.cart-item small{display:block;color:var(--muted);margin-top:4px}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{border:0;background:var(--mint);color:var(--green);border-radius:7px;width:24px;height:24px;font-weight:900}.remove{border:0;background:none;color:#b45c4d;font-size:11px}.cart-foot{padding:20px 22px;border-top:1px solid var(--line)}.total{display:flex;justify-content:space-between;font-weight:900;color:var(--green);margin-bottom:15px}.cart-foot .primary{width:100%}
+.modal-wrap{position:fixed;inset:0;background:#101b14a6;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.modal-wrap.show{display:flex}.modal{background:#fff;width:min(520px,100%);max-height:92vh;overflow:auto;border-radius:22px;padding:25px}.modal h3{color:var(--green);margin:0 0 8px}.modal p{color:var(--muted);font-size:13px;line-height:1.8}.checkout-form{display:grid;gap:12px;margin-top:18px}.checkout-form label{font-size:12px;font-weight:700;color:#526056}.field{display:grid;gap:6px}.checkout-actions{display:flex;gap:10px;margin-top:5px}.checkout-actions>*{flex:1}.notice{background:#fff5e8;color:#805321;border-radius:12px;padding:11px;font-size:11px;line-height:1.8}
+.admin-wrap{position:fixed;inset:0;background:#f7f8f3;z-index:60;display:none;overflow:auto}.admin-wrap.show{display:block}.admin-top{background:var(--green);color:#fff;padding:18px 0}.admin-top .container{display:flex;align-items:center;justify-content:space-between;gap:12px}.admin-content{padding:28px 0 60px}.admin-login{max-width:390px;margin:60px auto;background:#fff;padding:28px;border-radius:20px;box-shadow:var(--shadow)}.admin-login h2{color:var(--green);margin-top:0}.admin-login input,.admin-form input,.admin-form select{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin:7px 0 13px}.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.admin-tab{border:1px solid var(--line);background:#fff;padding:10px 16px;border-radius:11px;color:var(--green);font-weight:700}.admin-tab.active{background:var(--green);color:#fff}.admin-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:18px}.admin-panel h3{color:var(--green);margin-top:0}.admin-table{width:100%;border-collapse:collapse;font-size:13px}.admin-table th,.admin-table td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:right}.admin-table th{color:var(--muted);font-weight:700}.admin-table button{border:0;border-radius:8px;padding:7px 10px;margin:2px}.admin-edit{background:var(--mint);color:var(--green)}.admin-delete{background:#fff0ed;color:#a84436}.admin-form{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.admin-form label{font-size:12px;font-weight:700;color:#526056}.admin-form .full{grid-column:1/-1}.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.admin-stat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px}.admin-stat b{display:block;font-size:22px;color:var(--green)}.admin-stat small{color:var(--muted)}.admin-empty{color:var(--muted);padding:20px;text-align:center}.admin-hint{font-size:12px;color:var(--muted);line-height:1.9}.toast{position:fixed;bottom:22px;right:50%;transform:translate(50%,20px);background:#203f2c;color:#fff;padding:12px 18px;border-radius:12px;z-index:80;opacity:0;transition:.25s;font-size:13px;pointer-events:none}.toast.show{opacity:1;transform:translate(50%,0)}
+@media(max-width:850px){.links{display:none}.menu-btn{display:block}.hero-inner{grid-template-columns:1fr;text-align:center}.hero p{margin:auto}.hero-buttons{justify-content:center}.hero-art{height:300px}.hero-plate{font-size:125px;width:280px}.trust{grid-template-columns:1fr;margin-top:16px}.products{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:30px}.about-visual{min-height:260px}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.admin-stats{grid-template-columns:1fr}.admin-form{grid-template-columns:1fr}.admin-form .full{grid-column:auto}.admin-table{font-size:11px}.admin-table th,.admin-table td{padding:8px 5px}}
+@media(max-width:480px){.nav{height:66px}.brand{font-size:20px}.logo{width:36px;height:36px}.cart-btn{padding:10px 11px;font-size:12px}.hero-inner{padding-top:30px}.hero-art{height:255px}.hero-plate{width:235px;font-size:105px}.hero h1{font-size:36px}.products{gap:10px}.product-img{height:135px;font-size:65px}.product-info{padding:12px}.product-info h3{font-size:14px}.product-info p{font-size:11px;min-height:48px}.product-bottom{align-items:flex-start;flex-direction:column}.add{width:100%}section{padding:58px 0}.section-head h2{font-size:25px}.features{grid-template-columns:1fr}.footer-inner{justify-content:center;text-align:center}.footer-links{justify-content:center}}
+</style>
+</head>
+<body>
+<div class="topbar">🌱 تازگی و کیفیت، انتخاب هر روز شماست</div>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#"><span class="logo">🌿</span> سبزینه</a>
+  <nav class="links"><a href="#home">خانه</a><a href="#products">محصولات</a><a href="#about">درباره ما</a><a href="#contact">تماس با ما</a></nav>
+  <div class="nav-actions"><button class="menu-btn" onclick="document.querySelector('#products').scrollIntoView()">محصولات</button><button class="secondary" style="padding:10px 12px;font-size:12px" onclick="openAdmin()">⚙ مدیریت</button><button class="cart-btn" onclick="openCart()">🛒 سبد خرید <span class="cart-count" id="cartCount">۰</span></button></div>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="container hero-inner">
+  <div>
+   <span class="eyebrow">🍃 از طبیعت، با عشق</span>
+   <h1>طعم تازگی را<br><span>به خانه بیاورید</span></h1>
+   <p>در سبزینه، سبزیجات تازه و محصولات آماده طبخ را با دقت انتخاب و آماده می‌کنیم تا آشپزی برای شما ساده‌تر، خوشمزه‌تر و دل‌چسب‌تر باشد.</p>
+   <div class="hero-buttons"><a class="primary" href="#products">مشاهده محصولات ←</a><a class="secondary" href="#about">بیشتر درباره ما</a></div>
+  </div>
+  <div class="hero-art"><div class="hero-plate">🥬🥕🍆</div><div class="float-tag tag-one">🌱 انتخاب تازه روز</div><div class="float-tag tag-two">🥗 آماده برای آشپزی</div></div>
+ </div>
+</section>
+<div class="container trust">
+ <div class="trust-card"><span class="trust-icon">🌿</span><div><b>تازگی و کیفیت</b><small>انتخاب با دقت و وسواس</small></div></div>
+ <div class="trust-card"><span class="trust-icon">🧺</span><div><b>آماده‌سازی بهداشتی</b><small>با توجه به جزئیات</small></div></div>
+ <div class="trust-card"><span class="trust-icon">🚚</span><div><b>ثبت سفارش آسان</b><small>خرید راحت و سریع</small></div></div>
+</div>
+<section id="products">
+ <div class="container">
+  <div class="section-head"><span class="eyebrow">محصولات سبزینه</span><h2>خوشمزه‌های تازه و آماده</h2><p>محصول مورد علاقه‌تان را انتخاب کنید و به سبد خرید بیفزایید.</p></div>
+  <div class="filters" id="filters">
+   <button class="filter active" data-filter="all">همه محصولات</button><button class="filter" data-filter="fresh">سبزیجات تازه</button><button class="filter" data-filter="prepared">آماده طبخ</button><button class="filter" data-filter="fried">سرخ‌شده‌ها</button>
+  </div>
+  <div class="products" id="productsGrid"></div>
+ </div>
+</section>
+<section class="about" id="about">
+ <div class="container about-grid">
+  <div class="about-visual">🥦🥬🍅</div>
+  <div class="about-copy"><span class="eyebrow">داستان سبزینه</span><h2>ساده‌تر آشپزی کنید، تازه‌تر زندگی کنید</h2><p>سبزینه با این ایده شکل گرفته که تهیه مواد اولیه باکیفیت و آماده‌سازی آن‌ها باید ساده و لذت‌بخش باشد. ما تلاش می‌کنیم محصولات متنوعی از سبزیجات تازه تا خوراکی‌های آماده طبخ را در دسترس شما قرار دهیم.</p><p>هدف ما ارائه تجربه‌ای خوشایند از انتخاب محصول تا ثبت سفارش است؛ با توجه به کیفیت، بسته‌بندی مناسب و رضایت مشتری.</p>
+   <div class="features"><div class="feature"><span>✓</span> تنوع محصولات</div><div class="feature"><span>✓</span> توجه به کیفیت</div><div class="feature"><span>✓</span> سفارش آسان</div><div class="feature"><span>✓</span> بسته‌بندی مناسب</div></div>
+  </div>
+ </div>
+</section>
+<section id="contact">
+ <div class="container">
+  <div class="section-head"><span class="eyebrow">در ارتباط باشیم</span><h2>تماس با سبزینه</h2><p>برای پرسش یا پیشنهاد، پیام خود را برای ما بنویسید.</p></div>
+  <div class="contact-grid">
+   <div class="contact-card"><h3>راه‌های ارتباطی</h3><div class="contact-line"><span>📞</span><div>تلفن تماس<br><b>شماره تماس خود را وارد کنید</b></div></div><div class="contact-line"><span>📍</span><div>نشانی<br><b>آدرس فروشگاه خود را وارد کنید</b></div></div><div class="contact-line"><span>📷</span><div>اینستاگرام<br><b>آدرس صفحه اینستاگرام</b></div></div><p style="font-size:11px;color:#9aa39b">اطلاعات بالا نمونه هستند؛ پیش از انتشار، آن‌ها را با اطلاعات واقعی کسب‌وکار جایگزین کنید.</p></div>
+   <div class="contact-card"><h3>ارسال پیام</h3><form class="contact-form" onsubmit="event.preventDefault();toast('پیام شما در این نسخه نمایشی ثبت نشده است؛ برای اتصال فرم به ایمیل یا سرور، نیاز به راه‌اندازی بک‌اند است.');"><input required placeholder="نام شما"><input type="tel" placeholder="شماره تماس"><textarea required placeholder="متن پیام شما"></textarea><button class="primary" type="submit">ارسال پیام</button></form></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><div><a class="brand" href="#" style="color:#fff"><span class="logo">🌿</span> سبزینه</a><p>تازگی از دل طبیعت، برای خانه شما.</p></div><div class="footer-links"><a href="#home">خانه</a><a href="#products">محصولات</a><a href="#about">درباره ما</a></div><p>© تمامی حقوق برای سبزینه محفوظ است.</p></div></footer>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer" aria-label="سبد خرید">
+ <div class="drawer-head"><h3>🛒 سبد خرید شما</h3><button class="close" onclick="closeCart()">بستن ✕</button></div>
+ <div class="cart-items" id="cartItems"></div>
+ <div class="cart-foot"><div class="total"><span>مبلغ کل</span><span id="cartTotal">۰ تومان</span></div><button class="primary" onclick="checkout()">ادامه و ثبت سفارش ←</button></div>
+</aside>
+<div class="modal-wrap" id="checkoutModal">
+ <div class="modal">
+  <h3>ثبت سفارش</h3><p>اطلاعات دریافت سفارش را وارد کنید. پس از ثبت، خلاصه سفارش برای شما نمایش داده می‌شود.</p>
+  <form class="checkout-form" id="checkoutForm">
+   <div class="field"><label for="customerName">نام و نام خانوادگی *</label><input id="customerName" required placeholder="نام شما"></div>
+   <div class="field"><label for="customerPhone">شماره تماس *</label><input id="customerPhone" required type="tel" placeholder="مثلاً 09123456789" pattern="[0-9۰-۹+() -]{8,}"></div>
+   <div class="field"><label for="customerAddress">آدرس کامل *</label><textarea id="customerAddress" required placeholder="استان، شهر، خیابان، پلاک و واحد"></textarea></div>
+   <div class="field"><label for="customerNote">توضیحات سفارش (اختیاری)</label><input id="customerNote" placeholder="زمان مناسب تحویل یا توضیح دیگر"></div>
+   <div class="notice">توجه: این نسخه، رابط کاربری و سبد خرید را اجرا می‌کند. برای دریافت واقعی سفارش، پرداخت اینترنتی و ارسال سفارش به فروشنده باید درگاه پرداخت و بک‌اند یا سرویس سفارش‌گیری متصل شود.</div>
+   <div class="checkout-actions"><button class="primary" type="submit">ثبت سفارش</button><button class="secondary" type="button" onclick="closeCheckout()">انصراف</button></div>
+  </form>
+  <div id="orderResult" style="display:none"></div>
+ </div>
+</div>
+<div class="admin-wrap" id="adminWrap">
+ <div class="admin-top"><div class="container"><div><b style="font-size:20px">⚙ پنل مدیریت سبزینه</b><div style="font-size:11px;opacity:.8">مدیریت محصولات و سفارش‌ها</div></div><button class="close" onclick="closeAdmin()">بازگشت به سایت ✕</button></div></div>
+ <div class="container admin-content">
+  <div id="adminLogin" class="admin-login"><h2>ورود مدیر</h2><p class="admin-hint">برای نسخه نمایشی، رمز پیش‌فرض <b>123456789</b> است. پس از ورود، حتماً آن را در کد تغییر دهید و برای انتشار عمومی از احراز هویت سمت سرور استفاده کنید.</p><label>رمز عبور مدیر</label><input id="adminPassword" type="password" placeholder="رمز عبور"><button class="primary" style="width:100%" onclick="adminLogin()">ورود به پنل</button><div id="loginError" style="color:#b44;font-size:12px;margin-top:8px"></div></div>
+  <div id="adminDashboard" style="display:none">
+   <div class="admin-stats"><div class="admin-stat"><b id="statProducts">۰</b><small>تعداد محصولات</small></div><div class="admin-stat"><b id="statOrders">۰</b><small>سفارش‌های ثبت‌شده</small></div><div class="admin-stat"><b id="statSales">۰</b><small>مجموع سفارش‌ها (تومان)</small></div></div>
+   <div class="admin-tabs"><button class="admin-tab active" data-admin-tab="manageProducts" onclick="showAdminTab('manageProducts',this)">مدیریت محصولات</button><button class="admin-tab" data-admin-tab="manageOrders" onclick="showAdminTab('manageOrders',this)">سفارش‌ها</button></div>
+   <div id="manageProducts" class="admin-panel">
+    <h3 id="productFormTitle">افزودن محصول جدید</h3>
+    <form class="admin-form" id="adminProductForm">
+     <input type="hidden" id="editProductId">
+     <div><label>نام محصول</label><input id="adminProductName" required placeholder="مثلاً سبزی خوردن"></div>
+     <div><label>قیمت (تومان)</label><input id="adminProductPrice" required type="number" min="0" placeholder="85000"></div>
+     <div><label>واحد فروش</label><input id="adminProductUnit" required placeholder="بسته"></div>
+     <div><label>ایموجی محصول</label><input id="adminProductEmoji" maxlength="8" placeholder="🥬"></div>
+     <div><label>دسته‌بندی</label><select id="adminProductCat"><option value="fresh">سبزیجات تازه</option><option value="prepared">آماده طبخ</option><option value="fried">سرخ‌شده‌ها</option></select></div>
+     <div><label>برچسب</label><input id="adminProductLabel" placeholder="تازه روز"></div>
+     <div class="full"><label>توضیحات</label><input id="adminProductDesc" placeholder="توضیح کوتاه محصول"></div>
+     <div class="full" style="display:flex;gap:8px;flex-wrap:wrap"><button class="primary" type="submit">ذخیره محصول</button><button class="secondary" type="button" onclick="resetProductForm()">پاک کردن فرم</button></div>
+    </form>
+    <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+    <h3>فهرست محصولات</h3><div style="overflow:auto"><table class="admin-table"><thead><tr><th>محصول</th><th>قیمت</th><th>دسته</th><th>عملیات</th></tr></thead><tbody id="adminProductsTable"></tbody></table></div>
+   </div>
+   <div id="manageOrders" class="admin-panel" style="display:none"><h3>سفارش‌های ثبت‌شده</h3><p class="admin-hint">سفارش‌هایی که از فرم این نسخه ثبت شوند، در همین مرورگر ذخیره می‌شوند.</p><div id="adminOrdersList"></div></div>
+   <p class="admin-hint">این پنل فقط برای مدیریت نمایشی در مرورگر فعلی است. برای مدیریت امن از چند دستگاه، ثبت سفارش مرکزی و پرداخت واقعی، اتصال به سرور و پایگاه داده ضروری است.</p>
+  </div>
+ </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const products=[
+ {id:1,name:"سبزی خوردن تازه",desc:"ترکیبی خوش‌عطر از سبزی‌های تازه روز",price:85000,unit:"بسته",emoji:"🥬",cat:"fresh",label:"تازه روز"},
+ {id:2,name:"سبزی قورمه پاک‌شده",desc:"پاک‌شده و آماده استفاده در غذا",price:120000,unit:"بسته",emoji:"🌿",cat:"prepared",label:"آماده طبخ"},
+ {id:3,name:"سبزی آش",desc:"ترکیب سبزی مناسب آش‌های خانگی",price:95000,unit:"بسته",emoji:"🥗",cat:"prepared",label:"محبوب"},
+ {id:4,name:"سیب‌زمینی سرخ‌شده",desc:"خوش‌طعم و مناسب کنار غذا",price:145000,unit:"ظرف",emoji:"🍟",cat:"fried",label:"سرخ‌شده"},
+ {id:5,name:"بادمجان سرخ‌شده",desc:"آماده برای کشک بادمجان و خوراک",price:165000,unit:"ظرف",emoji:"🍆",cat:"fried",label:"سرخ‌شده"},
+ {id:6,name:"کدو سرخ‌شده",desc:"برش‌خورده و آماده سرو یا پخت",price:135000,unit:"ظرف",emoji:"🥒",cat:"fried",label:"سرخ‌شده"},
+ {id:7,name:"هویج و سبزیجات خردشده",desc:"مناسب سوپ، سالاد و انواع غذا",price:90000,unit:"بسته",emoji:"🥕",cat:"fresh",label:"تازه"},
+ {id:8,name:"پیازداغ",desc:"چاشنی خوش‌عطر برای غذاهای ایرانی",price:110000,unit:"ظرف",emoji:"🧅",cat:"fried",label:"آماده مصرف"}
+];
+let cart=JSON.parse(localStorage.getItem("sabzineh_cart")||"[]");
+const defaultProducts=products.map(p=>({...p}));
+let orders=JSON.parse(localStorage.getItem("sabzineh_orders")||"[]");
+let adminUnlocked=false;
+function saveProducts(){localStorage.setItem("sabzineh_products",JSON.stringify(products))}
+const savedProducts=localStorage.getItem("sabzineh_products");
+if(savedProducts){try{const parsed=JSON.parse(savedProducts);if(Array.isArray(parsed)&&parsed.length)products.splice(0,products.length,...parsed)}catch(e){}}
+const toman=n=>new Intl.NumberFormat("fa-IR").format(n)+" تومان";
+const fa=n=>new Intl.NumberFormat("fa-IR").format(n);
+function save(){localStorage.setItem("sabzineh_cart",JSON.stringify(cart));renderCart();document.getElementById("cartCount").textContent=fa(cart.reduce((s,x)=>s+x.qty,0))}
+function renderProducts(filter="all"){const grid=document.getElementById("productsGrid");grid.innerHTML=products.filter(p=>filter==="all"||p.cat===filter).map(p=>`<article class="product"><div class="product-img"><span class="label">${p.label}</span>${p.emoji}</div><div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><span class="price">${toman(p.price)} <small>/ ${p.unit}</small></span><button class="add" onclick="addToCart(${p.id})">＋ افزودن</button></div></div></article>`).join("")}
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest(".filter");if(!b)return;document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.filter)});
+function addToCart(id){const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save();toast("محصول به سبد خرید اضافه شد")}
+function changeQty(id,d){const item=cart.find(x=>x.id===id);if(!item)return;item.qty+=d;if(item.qty<=0)cart=cart.filter(x=>x.id!==id);save()}
+function renderCart(){const el=document.getElementById("cartItems");if(!cart.length){el.innerHTML='<div class="empty"><div style="font-size:48px">🧺</div><b>سبد خرید شما خالی است</b><p>از محصولات سبزینه چیزی انتخاب کنید.</p></div>'}else{el.innerHTML=cart.map(x=>{const p=products.find(y=>y.id===x.id);return `<div class="cart-item"><div class="cart-emoji">${p.emoji}</div><div><b>${p.name}</b><small>${toman(p.price)} / ${p.unit}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><b>${fa(x.qty)}</b><button onclick="changeQty(${p.id},1)">+</button></div></div><button class="remove" onclick="changeQty(${p.id},-${x.qty})">حذف</button></div>`}).join("")}document.getElementById("cartTotal").textContent=toman(cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0));document.getElementById("cartCount").textContent=fa(cart.reduce((s,x)=>s+x.qty,0))}
+function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("overlay").classList.add("show")}
+function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("overlay").classList.remove("show")}
+function checkout(){if(!cart.length){toast("سبد خرید شما خالی است");return}closeCart();document.getElementById("checkoutModal").classList.add("show");document.getElementById("checkoutForm").style.display="grid";document.getElementById("orderResult").style.display="none"}
+function closeCheckout(){document.getElementById("checkoutModal").classList.remove("show")}
+document.getElementById("checkoutForm").addEventListener("submit",e=>{e.preventDefault();if(!cart.length){toast("سبد خرید خالی است");return}const name=document.getElementById("customerName").value.trim(),phone=document.getElementById("customerPhone").value.trim(),address=document.getElementById("customerAddress").value.trim(),note=document.getElementById("customerNote").value.trim();const lines=cart.map(x=>{const p=products.find(y=>y.id===x.id);return `• ${p.name} × ${fa(x.qty)} — ${toman(p.price*x.qty)}`}).join("\n");const total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);const order=`سفارش سبزینه\nنام: ${name}\nتلفن: ${phone}\nآدرس: ${address}\n\n${lines}\n\nمبلغ کل: ${toman(total)}\nتوضیحات: ${note||"ندارد"}`;document.getElementById("checkoutForm").style.display="none";const result=document.getElementById("orderResult");result.style.display="block";result.innerHTML=`<div style="background:var(--mint);padding:18px;border-radius:14px;margin-top:16px"><div style="font-size:30px">✅</div><b style="color:var(--green)">اطلاعات سفارش آماده شد</b><p>خلاصه سفارش شما ساخته شد. برای نهایی شدن ثبت سفارش، این متن را برای فروشنده ارسال کنید.</p><textarea id="orderText" readonly style="width:100%;min-height:190px;border:1px solid var(--line);border-radius:10px;padding:10px;direction:rtl">${order.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</textarea><button class="primary" style="width:100%;margin-top:10px" onclick="copyOrder()">کپی خلاصه سفارش</button><button class="secondary" style="width:100%;margin-top:8px" onclick="finishOrder()">بازگشت به فروشگاه</button></div>`;window.currentOrder=order});
+function copyOrder(){const text=document.getElementById("orderText").value;if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(()=>toast("خلاصه سفارش کپی شد")).catch(()=>fallbackCopy(text))}else fallbackCopy(text)}
+function fallbackCopy(text){const t=document.createElement("textarea");t.value=text;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();toast("خلاصه سفارش کپی شد")}
+function finishOrder(){cart=[];save();closeCheckout();toast("از خرید شما سپاسگزاریم")}
+let toastTimer;function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2800)}
+function openAdmin(){document.getElementById("adminWrap").classList.add("show");document.body.style.overflow="hidden";document.getElementById("adminPassword").value="";document.getElementById("loginError").textContent="";document.getElementById("adminLogin").style.display=adminUnlocked?"none":"block";document.getElementById("adminDashboard").style.display=adminUnlocked?"block":"none";if(adminUnlocked)refreshAdmin()}
+function closeAdmin(){document.getElementById("adminWrap").classList.remove("show");document.body.style.overflow=""}
+function adminLogin(){if(document.getElementById("adminPassword").value==="13881388"){adminUnlocked=true;document.getElementById("adminLogin").style.display="none";document.getElementById("adminDashboard").style.display="block";refreshAdmin()}else{document.getElementById("loginError").textContent="رمز عبور اشتباه است."}}
+function showAdminTab(id,btn){document.querySelectorAll(".admin-tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");document.getElementById("manageProducts").style.display=id==="manageProducts"?"block":"none";document.getElementById("manageOrders").style.display=id==="manageOrders"?"block":"none"}
+function refreshAdmin(){document.getElementById("statProducts").textContent=fa(products.length);document.getElementById("statOrders").textContent=fa(orders.length);document.getElementById("statSales").textContent=fa(orders.reduce((s,o)=>s+o.total,0));document.getElementById("adminProductsTable").innerHTML=products.map(p=>`<tr><td>${p.emoji||"🛒"} ${p.name}</td><td>${toman(p.price)}</td><td>${p.cat==="fresh"?"تازه":p.cat==="prepared"?"آماده طبخ":"سرخ‌شده"}</td><td><button class="admin-edit" onclick="editProduct(${p.id})">ویرایش</button><button class="admin-delete" onclick="deleteProduct(${p.id})">حذف</button></td></tr>`).join("")||'<tr><td colspan="4">محصولی وجود ندارد.</td></tr>';document.getElementById("adminOrdersList").innerHTML=orders.length?orders.map(o=>`<div style="border:1px solid var(--line);border-radius:13px;padding:14px;margin:10px 0"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b>سفارش ${fa(o.id).slice(-6)}</b><small>${o.date}</small></div><p style="font-size:12px;line-height:2;color:#657168">مشتری: ${o.name} | تماس: ${o.phone}<br>آدرس: ${o.address}<br>اقلام: ${o.items.map(i=>{const p=products.find(p=>p.id===i.id);return (p?p.name:"محصول حذف‌شده")+" × "+fa(i.qty)}).join("، ")}<br>مبلغ: <b style="color:var(--green)">${toman(o.total)}</b><br>توضیحات: ${o.note||"ندارد"}</p><button class="admin-delete" onclick="deleteOrder(${o.id})">حذف سفارش</button></div>`).join(""):'<div class="admin-empty">هنوز سفارشی ثبت نشده است.</div>'}
+function resetProductForm(){document.getElementById("adminProductForm").reset();document.getElementById("editProductId").value="";document.getElementById("productFormTitle").textContent="افزودن محصول جدید"}
+function editProduct(id){const p=products.find(x=>x.id===id);if(!p)return;document.getElementById("editProductId").value=p.id;document.getElementById("adminProductName").value=p.name;document.getElementById("adminProductPrice").value=p.price;document.getElementById("adminProductUnit").value=p.unit;document.getElementById("adminProductEmoji").value=p.emoji;document.getElementById("adminProductCat").value=p.cat;document.getElementById("adminProductLabel").value=p.label;document.getElementById("adminProductDesc").value=p.desc;document.getElementById("productFormTitle").textContent="ویرایش محصول";document.getElementById("manageProducts").scrollIntoView({behavior:"smooth"})}
+function deleteProduct(id){if(!confirm("این محصول حذف شود؟"))return;const index=products.findIndex(x=>x.id===id);if(index>=0)products.splice(index,1);saveProducts();renderProducts(document.querySelector(".filter.active")?.dataset.filter||"all");refreshAdmin();toast("محصول حذف شد")}
+function deleteOrder(id){if(!confirm("این سفارش حذف شود؟"))return;orders=orders.filter(o=>o.id!==id);localStorage.setItem("sabzineh_orders",JSON.stringify(orders));refreshAdmin();toast("سفارش حذف شد")}
+document.getElementById("adminProductForm").addEventListener("submit",e=>{e.preventDefault();const id=Number(document.getElementById("editProductId").value);const item={id:id||Date.now(),name:document.getElementById("adminProductName").value.trim(),price:Number(document.getElementById("adminProductPrice").value),unit:document.getElementById("adminProductUnit").value.trim(),emoji:document.getElementById("adminProductEmoji").value.trim()||"🥬",cat:document.getElementById("adminProductCat").value,label:document.getElementById("adminProductLabel").value.trim()||"سبزینه",desc:document.getElementById("adminProductDesc").value.trim()};if(id){const i=products.findIndex(p=>p.id===id);if(i>=0)products[i]=item}else products.unshift(item);saveProducts();renderProducts(document.querySelector(".filter.active")?.dataset.filter||"all");refreshAdmin();resetProductForm();toast("محصول ذخیره شد")});
+renderProducts();save();
+</script>
+</body>
+</html>
